@@ -39,24 +39,28 @@ class Calculator:
         
     def calculate(self):
             
-            choice = self.choose_operation()
-            a, b = self.ask_numbers()
+        choice = self.choose_operation()
+        a, b = self.ask_numbers()
 
-            if choice == "1":
-                result = self.addition(a, b)
-            
-            elif choice =="2":
-                result = self.subtraction(a, b)
+        if choice == "1":
+            result = self.addition(a, b)
+        
+        elif choice =="2":
+            result = self.subtraction(a, b)
 
-            elif choice == "3":
-                result == self.multiplication(a, b)
+        elif choice == "3":
+            result == self.multiplication(a, b)
 
-            else:
-                result == self.division(a, b)
+        else:
+            result == self.division(a, b)
 
-            print(f"The result is: {result}")
+        print(f"The result is: {result}")
     
     def repeat(self):
+        question = input("Do you want to try again? (yes/no): ").lower()
+
+        if question == "no":
+            self.running = False
 
 
 
