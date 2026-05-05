@@ -38,12 +38,27 @@ class Calculator:
             raise ValueError("You must enter a valid choice")
         
     def calculate(self):
-        try:
+            
             choice = self.choose_operation()
             a, b = self.ask_numbers()
 
             if choice == "1":
                 result = self.addition(a, b)
+            
+            elif choice =="2":
+                result = self.subtraction(a, b)
+
+            elif choice == "3":
+                result == self.multiplication(a, b)
+
+            else:
+                result == self.division(a, b)
+
+            print(f"The result is: {result}")
+    
+    def repeat(self):
+
+
 
 
         
