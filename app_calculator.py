@@ -62,6 +62,14 @@ class Calculator:
         if question == "no":
             self.running = False
 
+    def run(self):
+        while self.running:
+            self.calculate()
+            self.choose_operation()
+            
+
+
+
 
 
 
