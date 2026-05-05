@@ -25,4 +25,26 @@ class Calculator:
         except ValueError:
             raise ValueError("The value you have entered is invalid")
         
+    def choose_operation(self):
+        print("Please Choose an Operation: ")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
+
+        choice = input("Enter your choice (1-4): ")
+
+        if choice not in ["1", "2", "3", "4"]:
+            raise ValueError("You must enter a valid choice")
+        
+    def calculate(self):
+        try:
+            choice = self.choose_operation()
+            a, b = self.ask_numbers()
+
+            if choice == "1":
+                result = self.addition(a, b)
+
+
+        
     
