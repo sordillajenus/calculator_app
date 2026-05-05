@@ -14,3 +14,8 @@ class Calculator:
     def division(self, a, b):
         return a / b
 
+    def ask_numbers(self, a, b):
+        a = int(input("Enter first number: "))
+        b = int(input("Enter second number: "))
+
+        return a, b
