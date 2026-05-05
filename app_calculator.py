@@ -19,8 +19,8 @@ class Calculator:
 
     def ask_numbers(self, a, b):
         try:
-            a = int(input("Enter first number: "))
-            b = int(input("Enter second number: "))
+            a = float(input("Enter first number: "))
+            b = float(input("Enter second number: "))
             return a, b
         except ValueError:
             raise ValueError("The value you have entered is invalid")
