@@ -32,3 +32,10 @@ class ScientificSymbolic(Calculator):
     def factorial(self, number):
         return math.factorial(number)
     
+    def derivative(self, expression):
+        differential_quotient_dy_over_dx = sympy.Symbol("x")
+        return sympy.diff(expression, differential_quotient_dy_over_dx)
+    
+    def integral(self, expression):
+        differential_dx = sympy.Symbol("x")
+        return sympy.integrate(expression, differential_dx)
