@@ -54,7 +54,7 @@ class Calculator:
                 result = self.multiplication(a, b)
 
             else:
-                result == self.division(a, b)
+                result = self.division(a, b)
 
             print(f"The result is: {result}")
 
