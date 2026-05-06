@@ -65,10 +65,12 @@ class Calculator:
     def run(self):
         while self.running:
             self.calculate()
-            self.choose_operation()
             self.repeat()
 
             print("Thank you for using the program")
+
+calc = Calculator()
+calc.run()
 
 
 
