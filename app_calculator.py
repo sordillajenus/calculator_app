@@ -53,7 +53,7 @@ class Calculator:
             elif choice == "3":
                 result = self.multiplication(a, b)
 
-            else:
+            elif choice == "4":
                 result = self.division(a, b)
 
             print(f"The result is: {result}")
