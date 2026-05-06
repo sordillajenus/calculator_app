@@ -14,7 +14,6 @@ class Calculator:
     def division(self, a, b):
         if b == 0:
             raise ZeroDivisionError("Division by zero is not allowed")
-        
         return a / b
 
     def ask_numbers(self):
@@ -26,7 +25,7 @@ class Calculator:
             raise ValueError("The value you have entered is invalid")
         
     def choose_operation(self):
-        print("Please Choose an Operation: ")
+        print("\nPlease Choose an Operation: ")
         print("1. Addition")
         print("2. Subtraction")
         print("3. Multiplication")
@@ -46,41 +45,30 @@ class Calculator:
 
             if choice == "1":
                 result = self.addition(a, b)
-            
-            elif choice =="2":
+            elif choice == "2":
                 result = self.subtraction(a, b)
-
             elif choice == "3":
                 result = self.multiplication(a, b)
-
             elif choice == "4":
                 result = self.division(a, b)
 
-            print(f"The result is: {result}")
+            print(f"\nResult: {result}")
 
         except Exception as e:
             print("Error:", e)
         
     def repeat(self):
         question = input("Do you want to try again? (yes/no): ").lower()
-
-        if question == "no":
+        if question == "no" or question == "n":
             self.running = False
 
     def run(self):
         while self.running:
             self.calculate()
-            self.repeat()
+            if self.running: 
+                self.repeat()
 
         print("Thank you for using the program")
 
 calc = Calculator()
 calc.run()
-
-
-
-
-
-
-        
-    
