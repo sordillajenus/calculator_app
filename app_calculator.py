@@ -2,16 +2,16 @@ class Calculator:
     def __init__ (self):
         self.running = True
 
-    def addition(self, a, b):
-        return a + b
+    def addition(self, number_1, number_2):
+        return number_1 + number_2
     
-    def subtraction(self, a, b):
-        return a - b
+    def subtraction(self, number_1, number_2):
+        return number_1 - number_2
     
-    def multiplication(self, a, b):
-        return a * b
+    def multiplication(self, number_1, number_2):
+        return number_1 * number_2
     
-    def division(self, a, b):
+    def division(self, number_1, number_2):
         if b == 0:
             raise ZeroDivisionError("Division by zero is not allowed")
         return a / b

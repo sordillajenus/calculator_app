@@ -5,13 +5,30 @@ from app_calculator import Calculator
 
 class ScientificSymbolic(Calculator):
     
-    def sine(self, x):
-        return math.sin(x)
+    def sine(self, number):
+        return math.sin(number)
     
-    def log(self, x):
-        return math.log(x)
+    def cosine(self, number):
+        return math.cos(number)
     
-    def power(self, x, y):
-        return math.pow(x, y)
+    def tangent(self, number):
+        return math.tan(number)
     
-    def factorial()
+    def cosecant(self, number):
+        return 1 / math.sin(number)
+    
+    def secant(self, number):
+        return 1 / math.cos(number)
+   
+    def cotangent(self, number):
+        return 1 / math.tan(number)
+
+    def log(self, number):
+        return math.log(number)
+    
+    def power(self, number_1, number_2):
+        return math.pow(number_1, number_2)
+    
+    def factorial(self, number):
+        return math.factorial(number)
+    
