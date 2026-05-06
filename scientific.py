@@ -1,6 +1,5 @@
 import math
 import sympy
-import statistics
 from app_calculator import Calculator
 
 class ScientificSymbolic(Calculator):
@@ -26,11 +25,17 @@ class ScientificSymbolic(Calculator):
     def log(self, number):
         return math.log(number)
     
+    def hypotenuse(self, number_1, number_2):
+        return math.hypot(number_1, number_2)
+    
     def power(self, number_1, number_2):
         return math.pow(number_1, number_2)
     
     def factorial(self, number):
         return math.factorial(number)
+    
+    def squareroot(self, number):
+        return math.sqrt(number )
     
     def derivative(self, expression):
         differential_quotient_dy_over_dx = sympy.Symbol("x")
