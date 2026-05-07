@@ -63,12 +63,49 @@ class ScientificSymbolic:
 
             if not choice.isdigit() or not (1 <= int(choice) <= len(operations)):
                 raise ValueError("Plase Enter a Valid Choice.")
-            return int(choice)
+            return operations[int(choice) - 1]
         
         except ValueError:
             return self.ask_operation()
+        
+    def ask_input(self, operations):
 
+        numeric_operations = {
+            "Sine", "Cosine", "Tangent",
+            "Cosecant", "Secant", "Cotangent",
+            "Logarithmic", "Hypotenuse", "Power",
+            "Factorial", "Squareroot"
+        }
+
+        symbolic_operatios = {
+            "Differentiation", "Integration"
+        }
+
+        if operations in numeric_operations:
+            while True:
+                    number = int(input("Enter an number: "))
+                    try:
+                        return float(number)
+                    except ValueError:
+                        print("Enter a valid input")
+        
+        elif operations in symbolic_operatios:
+            expression = input(f"Enter expression or number for {operations}: ").strip()
+            return expression
+
+
+    def calculate(self, operations, value):
+
+        if operations == "Sine":
+            return math.sin(value)
+        elif operations == "Cosine":
+            return math.cos(value)
+        elif operations == "Tangent":
+            return math.tan(value)
+        
     
+
+           
 
             
 
