@@ -61,11 +61,12 @@ class ScientificSymbolic:
         try:
             choice = input("Please choose an operation (1-13): ").strip()
 
-            if not choice.isdigit() or not str(1 <= int(choice) <= len(choice)):
+            if not choice.isdigit() or not (1 <= int(choice) <= len(operations)):
                 raise ValueError("Plase Enter a Valid Choice.")
-            return choice
-        except ValueError("Enter a valid choice"):
-            return self.ask_operation
+            return int(choice)
+        
+        except ValueError:
+            return self.ask_operation()
 
     
 
