@@ -83,11 +83,11 @@ class ScientificSymbolic:
 
         if operations in numeric_operations:
             while True:
-                    number = int(input("Enter an number: "))
-                    try:
-                        return float(number)
-                    except ValueError:
-                        print("Enter a valid input")
+                try:
+                    number = float(input("Enter a number: "))
+                    return number
+                except ValueError:
+                    print("Enter a valid input")
         
         elif operations in symbolic_operatios:
             expression = input(f"Enter expression or number for {operations}: ").strip()
@@ -131,6 +131,16 @@ class ScientificSymbolic:
             base, exponent = value  
             return math.pow(base, exponent)
         
+        elif operations == "Differentiation":
+            differential_quotient_dy_over_dx = sympy.symbols('x')
+            expression = sympy.sympify(value)
+            return sympy.diff(expression, differential_quotient_dy_over_dx)
+
+        elif operations == "Integration":
+            differential_dx = sympy.symbols('x')
+            expression = sympy.sympify(value)
+            return sympy.integrate(expression, differential_dx)
+                
             
     
 
