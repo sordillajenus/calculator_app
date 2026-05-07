@@ -2,7 +2,7 @@ import math
 import sympy
 from app_calculator import Calculator
 
-class ScientificSymbolic(Calculator):
+class ScientificSymbolic:
     
     def sine(self, number):
         return math.sin(number)

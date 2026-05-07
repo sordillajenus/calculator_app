@@ -1,4 +1,6 @@
-class Calculator:
+from scientific import ScientificSymbolic
+
+class Calculator(ScientificSymbolic):
     def __init__ (self):
         self.running = True
 
@@ -64,9 +66,16 @@ class Calculator:
 
     def run(self):
         while self.running:
-            self.calculate()
-            if self.running: 
-                self.repeat()
+            choose = input("Do you want the 1. Normal Calculator or the 2. Scientific Calculator? (1/2): ").lower
+            if choose not in ["1","2"]:
+                raise ValueError("Invalid Choice")
+            else:
+                if choose == 1:
+                    self.calculate()
+                    if self.running: 
+                        self.repeat()
+                elif choose == 2:
+                    
 
         print("Thank you for using the program")
 
