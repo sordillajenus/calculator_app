@@ -44,3 +44,29 @@ class ScientificSymbolic:
     def integral(self, expression):
         differential_dx = sympy.Symbol("x")
         return sympy.integrate(expression, differential_dx)
+    
+    def ask_operation(self):
+        choices = {}
+        try:
+            print("Scientific-Symbolic\n")
+            print("1. Sine")
+            print("2. Cosine")
+            print("3. Tangent")
+            print("4. Cosecant")
+            print("5. Secant")
+            print("6. Cotangent")
+            print("7. Logarithmic")
+            print("8. Hypotenuse")
+            print("9. Power")
+            print("10. Factorial")
+            print("11. Squareroot")
+            print("12. Differentiation")
+            print("13. Integration")
+
+            operation = input("Enter your choice (1-13): ")
+            if operation not in []
+
+
+
+            
+                              
