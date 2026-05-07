@@ -97,12 +97,41 @@ class ScientificSymbolic:
     def calculate(self, operations, value):
 
         if operations == "Sine":
-            return math.sin(value)
-        elif operations == "Cosine":
-            return math.cos(value)
-        elif operations == "Tangent":
-            return math.tan(value)
+            return math.sin(math.radians(value))
         
+        elif operations == "Cosine":
+            return math.cos(math.radians(value))
+        
+        elif operations == "Tangent":
+            return math.tan(math.radians(value))
+        
+        elif operations == "Cosecant":
+            return 1 / math.sin(math.radians(value))
+        
+        elif operations == "Secant":
+            return 1 / math.cos(math.radians(value))
+        
+        elif operations == "Cotangent":
+            return 1 / math.tan(math.radians(value))
+        
+        elif operations == "Hypotenuse":
+            number_1, number_2 = value
+            return math.hypot(number_1, number_2)
+        
+        elif operations == "Logarithmic":
+            return math.log(value)
+        
+        elif operations == "Squareroot":
+            return math.sqrt(value)
+
+        elif operations == "Factorial":
+            return math.factorial(int(value))
+
+        elif operations == "Power":
+            base, exponent = value  
+            return math.pow(base, exponent)
+        
+            
     
 
            
