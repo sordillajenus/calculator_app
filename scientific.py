@@ -23,7 +23,7 @@ class ScientificSymbolic:
         return 1 / math.tan(number)
 
     def log(self, number):
-        return math.log(number)
+        return math.log10(number)
     
     def hypotenuse(self, number_1, number_2):
         return math.hypot(number_1, number_2)
@@ -77,7 +77,7 @@ class ScientificSymbolic:
             "Factorial", "Squareroot"
         }
 
-        symbolic_operatios = {
+        symbolic_operations = {
             "Differentiation", "Integration"
         }
 
@@ -88,9 +88,14 @@ class ScientificSymbolic:
                     return number
                 except ValueError:
                     print("Enter a valid input")
+
+        elif operations == "Hypotenuse":
+            number_1 = float(input("Enter first number: "))
+            number_2 = float(input("Enter second number: "))
+            return (number_1, number_2)
         
-        elif operations in symbolic_operatios:
-            expression = input(f"Enter expression or number for {operations}: ").strip()
+        elif operations in symbolic_operations:
+            expression = input(f"Enter expression or number for {operations} and use the format format x**2 + 3*x: ").strip()
             return expression
 
 
@@ -119,7 +124,7 @@ class ScientificSymbolic:
             return math.hypot(number_1, number_2)
         
         elif operations == "Logarithmic":
-            return math.log(value)
+            return math.log10(value)
         
         elif operations == "Squareroot":
             return math.sqrt(value)
@@ -140,7 +145,16 @@ class ScientificSymbolic:
             differential_dx = sympy.symbols('x')
             expression = sympy.sympify(value)
             return sympy.integrate(expression, differential_dx)
+        
+        else:
+            print("Operation is not defined")
                 
+
+    def run(self):
+        operation = self.ask_operation()
+        value = self.ask_input(operation)
+        result = self.calculate(operation, value)
+        print(result)
             
     
 
